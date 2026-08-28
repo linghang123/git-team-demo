@@ -1,0 +1,8 @@
+{
+  "name": "git-team-demo",
+  "private": true,
+  "scripts": {
+    "test": "node -e \"const fs=require('fs'); const s=fs.readFileSync('index.html','utf8'); if(!s.includes('<h1>')) process.exit(1)\"",
+    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('dist',{recursive:true}); fs.copyFileSync('index.html','dist/index.html')\""
+  }
+}
